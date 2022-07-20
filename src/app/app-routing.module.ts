@@ -6,24 +6,34 @@ import { TaskResolver } from './services/task.resolver';
 import { TasksComponent } from './tasks/tasks.component';
 
 const routes: Routes = [
- 
   {
-    path: "intro",
-    component: IntroComponent
-  },
-  {
-    path: "names",
-    component: NamesComponent
-  },
-  {
-    path: "tasks",
-    resolve: {dummy: TaskResolver},
-    component: TasksComponent
+    path: "index.html",
+    children: [
+    {
+      path: "intro",
+      component: IntroComponent
+    },
+    {
+      path: "names",
+      component: NamesComponent
+    },
+    {
+      path: "tasks",
+      resolve: {dummy: TaskResolver},
+      component: TasksComponent
+    },
+    { 
+      path: "**",
+      redirectTo: "intro"  
+    }
+  ]
   },
   { 
     path: "**",
-    redirectTo: "intro"  
-  },
+    redirectTo: "index.html"  
+  }
+ 
+ 
 ];
 
 @NgModule({

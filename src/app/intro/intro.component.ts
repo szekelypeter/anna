@@ -1,5 +1,5 @@
 import { Component } from "@angular/core";
-import { Router } from "@angular/router";
+import { ActivatedRoute, Router } from "@angular/router";
 
 @Component({
     selector: "intro-page",
@@ -8,9 +8,9 @@ import { Router } from "@angular/router";
 })
 export class IntroComponent {
 
-    constructor(private router: Router) {}
+    constructor(private router: Router, private activatedRoute: ActivatedRoute) {}
 
     next(event: any) {
-        this.router.navigate(["names"])
+        this.router.navigate(["../names"], { relativeTo: this.activatedRoute})
     }
 }

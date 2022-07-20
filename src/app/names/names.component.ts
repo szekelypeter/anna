@@ -1,6 +1,6 @@
 import { Component } from "@angular/core";
 import { FormControl, FormGroup, Validators } from "@angular/forms";
-import { Router } from "@angular/router";
+import { ActivatedRoute, Router } from "@angular/router";
 
 @Component({
     selector: "names-page",
@@ -20,12 +20,12 @@ export class NamesComponent {
 
     form = new FormGroup(this.controls)
 
-    constructor(private router: Router) {}
+    constructor(private router: Router,  private activatedRoute: ActivatedRoute) {}
 
     next(event: any) {
         this.form.markAllAsTouched()
         if (this.form.valid) {
-            this.router.navigate(["/tasks"], {queryParams: {round: 1, phase: "place"}})
+            this.router.navigate(["../tasks"],{relativeTo: this.activatedRoute, queryParams: {round: 1, phase: "place"}})
         }
     }
 }
