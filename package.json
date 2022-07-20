@@ -5,7 +5,6 @@
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
-    "build:prod": "ng build --base-href https://szekelypeter.github.io/anna/",
     "watch": "ng build --watch --configuration development",
     "test:headless": "ng test --watch=false --browsers=ChromeHeadless",
     "test": "ng test"
