@@ -11,5 +11,17 @@
 <body class="mat-typography mat-app-background">
   <app-root></app-root>
 <script src="runtime.08fb2c8b0ee87937.js" type="module"></script><script src="polyfills.90e9de176d6fafd1.js" type="module"></script><script src="main.94f3054f29d4e322.js" type="module"></script>
+<script type="text/javascript">
+  (function(l) {
+    if (l.search[1] === '/' ) {
+      var decoded = l.search.slice(1).split('&').map(function(s) { 
+        return s.replace(/~and~/g, '&')
+      }).join('?');
+      window.history.replaceState(null, null,
+          l.pathname.slice(0, -1) + decoded + l.hash
+      );
+    }
+  }(window.location))
+</script>
 
 </body></html>
