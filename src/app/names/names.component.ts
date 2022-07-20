@@ -21,7 +21,7 @@ export class NamesComponent {
     form = new FormGroup(this.controls)
 
     constructor(private router: Router,  private activatedRoute: ActivatedRoute) {
-        localStorage.setItem("route", "../names")
+        sessionStorage.setItem("route", "../names")
     }
 
     next(event: any) {

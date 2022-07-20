@@ -20,9 +20,9 @@ export class TasksComponent {
     constructor(private taskService: TaskService, private router: Router) {
         this.phase = taskService.phase
         this.round = taskService.round
-        localStorage.setItem("route", "../tasks")
-        localStorage.setItem("round", this.round.toString())
-        localStorage.setItem("phase", this.phase)
+        sessionStorage.setItem("route", "../tasks")
+        sessionStorage.setItem("round", this.round.toString())
+        sessionStorage.setItem("phase", this.phase)
     }
 
     next(event: any) {
@@ -41,8 +41,8 @@ export class TasksComponent {
                 break;
             }
         }
-        localStorage.setItem("round", this.round.toString())
-        localStorage.setItem("phase", this.phase)
+        sessionStorage.setItem("round", this.round.toString())
+        sessionStorage.setItem("phase", this.phase)
         this.router.navigate(
             [],
             { queryParams: { phase: this.phase, round: this.round } }

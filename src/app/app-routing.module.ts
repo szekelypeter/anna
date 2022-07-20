@@ -6,9 +6,9 @@ import { TaskResolver } from './services/task.resolver';
 import { TasksComponent } from './tasks/tasks.component';
 
 const routes: Routes = [
-  {
-    path: "index.html",
-    children: [
+ // {
+  //  path: "index.html",
+   // children: [
     {
       path: "intro",
       component: IntroComponent
@@ -26,12 +26,12 @@ const routes: Routes = [
       path: "**",
       redirectTo: "intro"  
     }
-  ]
-  },
-  { 
-    path: "**",
-    redirectTo: "index.html"  
-  }
+  //]
+  //},
+  //{ 
+   // path: "**",
+   // redirectTo: "index.html"  
+  //}
  
  
 ];
