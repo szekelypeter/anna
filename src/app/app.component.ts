@@ -11,6 +11,6 @@ export class AppComponent {
 
   constructor(private router: Router, private route: ActivatedRoute) {
     console.log(this.route)
-    this.router.navigate(["/intro"], { relativeTo: this.route})
+    this.router.navigate(["./intro"], { relativeTo: this.route})
   }
 }

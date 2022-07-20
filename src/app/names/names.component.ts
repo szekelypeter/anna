@@ -20,7 +20,9 @@ export class NamesComponent {
 
     form = new FormGroup(this.controls)
 
-    constructor(private router: Router,  private activatedRoute: ActivatedRoute) {}
+    constructor(private router: Router,  private activatedRoute: ActivatedRoute) {
+        localStorage.setItem("route", "../names")
+    }
 
     next(event: any) {
         this.form.markAllAsTouched()
