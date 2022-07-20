@@ -1,0 +1,38 @@
+<mat-card class="intro-component">
+    <mat-card-title>Bevezetés</mat-card-title>
+    <mat-card-subtitle>Egy kis ismertető a játékról</mat-card-subtitle>
+    <mat-card-content>
+        <div>
+          Ez a játék arra készült, hogyha van egy szabad napotok azt kellemesen romantikusan tudjátok eltönteni a párotokkal.
+          Segít benne, hogy milyen programokat csináljatok közösen.
+          És ami talán a legérdekesebb lehet az egészben, ha valós adatokat adtok meg, a végén ki tudja találni kik is vagytok valójában.
+          Ha az utolsó rész érdekel titeket a következő dolgokra érdemes figyelnetek:
+        </div>
+        <ul>
+           <li> A játék során kérlek ne álneveket használjatok.</li>
+           <li> A kérdésekre lehetőség szerint olyan választ adjatok, amikről van fenn információ az interneten. (Google hozzászólás, Facebook, Instagramm)</li>
+           <li> Minél frisebb információk vannak fenn a neten, annál pontosabb lesz a kiértékelés.</li>
+        </ul>
+      </mat-card-content>
+  </mat-card>
+<mat-card class="intro-component">
+  <mat-card-title>A játék</mat-card-title>
+  <mat-card-subtitle>A játék menete</mat-card-subtitle>
+  <mat-card-content>
+      <div>
+        Minden rész 3 fázisból áll.
+      </div>
+      <ul>
+        <li> El kell mennetek egy helszínre.</li>
+        <li> Lesz ott egy feladat. (Általában 2 részes feladat)</li>
+        <li> Válaszolnotok kell egy kérdésre. </li>
+     </ul>
+     <div>
+      Összesen 5 kör van, de ha úgy érzitek bármelyiket átugorhatjátok, vagy tehettek be mást is a helyére.
+     </div>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="primary" (click)="next($event)">Kezdődjön a játék</button>
+    </mat-card-actions>
+</mat-card>
+  

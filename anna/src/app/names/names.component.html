@@ -1,0 +1,21 @@
+<mat-card class="names-component">
+    <mat-card-title>Nevek</mat-card-title>
+    <mat-card-subtitle>Kérlek itt adjátok meg a neveiteket. Elég a keresztnév, de lehetősg szerint adjatok valós neveket.</mat-card-subtitle>
+    <mat-card-content>
+      <div [formGroup]="form">
+        <mat-form-field appearance="standard">
+          <mat-label>A pár első tagjának a neve</mat-label>
+          <input matInput placeholder="Első név" [formControl]="firstName">
+          <mat-error *ngIf="firstName.invalid">Ezt a mezőt kötelező kitölteni</mat-error>
+        </mat-form-field>
+        <mat-form-field appearance="standard">
+          <mat-label>A pár második tagjának a neve</mat-label>
+          <input matInput placeholder="Második név" [formControl]="secondName">
+          <mat-error *ngIf="secondName.invalid">Ezt a mezőt kötelező kitölteni</mat-error>
+        </mat-form-field>
+      </div>
+      </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="primary" (click)="next($event)">Tovább</button>
+    </mat-card-actions>
+  </mat-card>
