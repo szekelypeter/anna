@@ -27,7 +27,7 @@ export class NamesComponent {
     next(event: any) {
         this.form.markAllAsTouched()
         if (this.form.valid) {
-            this.router.navigate(["../tasks"],{relativeTo: this.activatedRoute, queryParams: {round: 1, phase: "place"}})
+            this.router.navigate(["../tasks"],{relativeTo: this.activatedRoute, queryParams: {round: 1, phase: "place", firstName: this.firstName.value, secondName: this.secondName.value}})
         }
     }
 }

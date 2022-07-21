@@ -2,8 +2,7 @@
   <mat-card-title>{{roundTitle[round -1] + " Helyszín"}}</mat-card-title>
   <mat-card-subtitle>{{placeTitle[round-1]}}</mat-card-subtitle>
   <mat-card-content>
-     <div>
-      {{placesDesc[round-1]}}
+     <div [innerText]="placesDesc[round-1]">
      </div>
      <a href="{{placesMaps[round-1]}}">Térkép link</a>
     </mat-card-content>
@@ -15,8 +14,7 @@
   <mat-card-title>{{roundTitle[round -1] + " Feladat"}}</mat-card-title>
   <mat-card-subtitle>{{taskTitle[round-1]}}</mat-card-subtitle>
   <mat-card-content>
-    <div>
-      {{task[round-1]}}
+    <div [innerText]="task[round-1]"> 
      </div>
     </mat-card-content>
   <mat-card-actions>
@@ -25,11 +23,13 @@
 </mat-card>
 <mat-card *ngIf="phase==='question'" class="intro-component">
   <mat-card-title>{{roundTitle[round -1] + " Kérdés"}}</mat-card-title>
-  <mat-card-subtitle>{{questionTitle[round-1]}}</mat-card-subtitle>
+  <mat-card-subtitle *ngIf="round < 5">{{questionTitle[round-1]}}</mat-card-subtitle>
+  <mat-card-subtitle *ngIf="round == 5">{{questionTitle[round-1].toUpperCase()}}</mat-card-subtitle>
   <mat-card-content>
-    <div>
-      {{question[round-1]}}
+    <div *ngIf="round < 5" [innerText]="question[round-1]">
      </div>
+     <div *ngIf="round == 5" [innerText]="question[round-1].toUpperCase()" >
+    </div>
      <div [formGroup]="form">
       <mat-form-field appearance="standard">
         <input matInput placeholder="{{label[round-1]}}" [formControl]="answer">

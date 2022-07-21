@@ -10,6 +10,8 @@ export class TaskResolver implements Resolve<boolean> {
     resolve(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<boolean> {
         this.taskService.phase = route.queryParams['phase']
         this.taskService.round = route.queryParams['round']
+        this.taskService.firstName = route.queryParams['firstName']
+        this.taskService.secondName = route.queryParams['secondName']
         return of(true)
     }
 }
