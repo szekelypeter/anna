@@ -1,34 +1,41 @@
 <mat-card  *ngIf="phase==='place'" class="intro-component">
-  <mat-card-title>Bevezetés</mat-card-title>
-  <mat-card-subtitle>Egy kis ismertető a játékról</mat-card-subtitle>
+  <mat-card-title>{{roundTitle[round -1] + " Helyszín"}}</mat-card-title>
+  <mat-card-subtitle>{{placeTitle[round-1]}}</mat-card-subtitle>
   <mat-card-content>
-      <p>
-        Egy egy egyszerű kedves kis játék place
-      </p>
+     <div>
+      {{placesDesc[round-1]}}
+     </div>
+     <a href="{{placesMaps[round-1]}}">Térkép link</a>
     </mat-card-content>
   <mat-card-actions>
     <button mat-raised-button color="primary" (click)="next($event)">Tovább</button>
   </mat-card-actions>
 </mat-card>
 <mat-card *ngIf="phase==='task'" class="intro-component">
-  <mat-card-title>Bevezetés</mat-card-title>
-  <mat-card-subtitle>Egy kis ismertető a játékról</mat-card-subtitle>
+  <mat-card-title>{{roundTitle[round -1] + " Feladat"}}</mat-card-title>
+  <mat-card-subtitle>{{taskTitle[round-1]}}</mat-card-subtitle>
   <mat-card-content>
-      <p>
-        Egy egy egyszerű kedves kis játék
-      </p>
+    <div>
+      {{task[round-1]}}
+     </div>
     </mat-card-content>
   <mat-card-actions>
     <button mat-raised-button color="primary" (click)="next($event)">Tovább</button>
   </mat-card-actions>
 </mat-card>
 <mat-card *ngIf="phase==='question'" class="intro-component">
-  <mat-card-title>Bevezetés</mat-card-title>
-  <mat-card-subtitle>Egy kis ismertető a játékról</mat-card-subtitle>
+  <mat-card-title>{{roundTitle[round -1] + " Kérdés"}}</mat-card-title>
+  <mat-card-subtitle>{{questionTitle[round-1]}}</mat-card-subtitle>
   <mat-card-content>
-      <p>
-        Egy egy egyszerű kedves kis játék
-      </p>
+    <div>
+      {{question[round-1]}}
+     </div>
+     <div [formGroup]="form">
+      <mat-form-field appearance="standard">
+        <input matInput placeholder="{{label[round-1]}}" [formControl]="answer">
+        <mat-error *ngIf="answer.invalid">Ezt a mezőt kötelező kitölteni</mat-error>
+      </mat-form-field>
+     </div>
     </mat-card-content>
   <mat-card-actions>
     <button mat-raised-button color="primary" (click)="next($event)">Tovább</button>
