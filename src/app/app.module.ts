@@ -15,6 +15,8 @@ import { RouterModule } from '@angular/router';
 import { ReactiveFormsModule } from '@angular/forms';
 import { TaskService } from './services/task.service';
 import { TasksComponent } from './tasks/tasks.component';
+import { HashLocationStrategy, LocationStrategy } from '@angular/common';
+import { WhatComponent } from './what.component';
 
 
 @NgModule({
@@ -22,7 +24,8 @@ import { TasksComponent } from './tasks/tasks.component';
     AppComponent,
     IntroComponent,
     NamesComponent,
-    TasksComponent
+    TasksComponent,
+    WhatComponent
   ],
   imports: [
     RouterModule,

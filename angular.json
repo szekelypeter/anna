@@ -32,7 +32,6 @@
               "src/styles.scss"
             ],
             "scripts": [],
-            "baseHref": "anna"
           },
           "configurations": {
             "production": {

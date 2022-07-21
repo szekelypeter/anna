@@ -1,3 +1,4 @@
+import { HashLocationStrategy, LocationStrategy } from "@angular/common";
 import { Component } from "@angular/core";
 import { ActivatedRoute, Router } from "@angular/router";
 
@@ -7,7 +8,6 @@ import { ActivatedRoute, Router } from "@angular/router";
     styleUrls: ["./intro.component.scss"]
 })
 export class IntroComponent {
-
     constructor(private router: Router, private activatedRoute: ActivatedRoute) {
        // let route = sessionStorage.getItem("route");
        // let roundQuery = sessionStorage.getItem("round");

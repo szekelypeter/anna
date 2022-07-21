@@ -4,11 +4,11 @@ import { IntroComponent } from './intro/intro.component';
 import { NamesComponent } from './names/names.component';
 import { TaskResolver } from './services/task.resolver';
 import { TasksComponent } from './tasks/tasks.component';
+import { WhatComponent } from './what.component';
 
 const routes: Routes = [
  // {
   //  path: "index.html",
-   // children: [
     {
       path: "intro",
       component: IntroComponent
@@ -22,10 +22,11 @@ const routes: Routes = [
       resolve: {dummy: TaskResolver},
       component: TasksComponent
     },
-    { 
-      path: "**",
-      redirectTo: "intro"  
-    }
+    {
+      path: '',
+      redirectTo: "/intro",
+      pathMatch: "full"
+    },
   //]
   //},
   //{ 
@@ -37,7 +38,10 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, {useHash: true})],
+  imports: [RouterModule.forRoot(routes,
+    {useHash: true}
+    // {scrollPositionRestoration: "top", onSameUrlNavigation: "reload",}
+     )],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

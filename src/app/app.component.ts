@@ -10,7 +10,7 @@ export class AppComponent {
   title = 'anna';
 
   constructor(private router: Router, private route: ActivatedRoute) {
-    console.log(this.route)
-    this.router.navigate(["./intro"], { relativeTo: this.route})
+  //  console.log(this.route)
+   // this.router.navigate(["./intro"], { relativeTo: this.route})
   }
 }
