@@ -37,7 +37,7 @@ export class TasksComponent {
     taskTitle = ["Rendelés", "Ajándék", "Fotózás", "Szeret nem szeret", "Szerelem"]
     placeTitle = ["Hotel annabella strandja", "Tihany", "Arborétum", "Pihenés", "Szép kilátások"]
     placesDesc = ["Kezdésnek menjetek le a strandara és igyatok egy kávét.",
-     "Sajnos nem a legjobb időben csináltátok. Eredetileg levendula szedést lett volna a program.\nDe sebaj, menjteke be Tihanyba.",
+     "Sajnos nem a legjobb időben csináljátok ezt a dolgot. Eredetileg levendula szedést lett volna a program.\nDe sebaj, menjetek be Tihanyba.",
      "Itt az ideje egy kis természetnek. Irány a Budaörsi Folly arborétum",
      "Na már sétáltatok eleget! Itt az ideje egy kicsit pihenni.\nTalálkozunk az örvényesi strandon", "Pihentünk kicsit, most itt az ideje megnézni egy szép kilátást. Menjteke a Balatonvilágosi Panoráma kilátóba"]
     placesMaps=["https://www.google.com/maps/place/Hotel+Annabella+strandja/@46.9573625,17.8929885,16z/data=!4m8!1m2!2m1!1sanna+hotel+balaton!3m4!1s0x4769bddf72a8c2ff:0xa003588c2709805b!8m2!3d46.9556342!4d17.9000456",
